@@ -15,7 +15,7 @@ and open the template in the editor.
         <div>
             <table>
             <tr><th colspan='2'>Resultat des sondages a ce jour</th></tr>
-            <?php foreach($ as $choix=>$votants) {?>
+            <?php foreach($reponses as $choix=>$votants) {?>
             <tr><td><?=$choix ?></td><td><?=$votants ?></td></tr>
             <?php }?>
             </table>
