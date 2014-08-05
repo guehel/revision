@@ -1,1 +1,1 @@
-\nphp\nphp\nphp\nphp\nphp\njsp\nasp\nphp\nasp\nphp\n\n\nphp\nphp\nasp\nasp\nphp\nphp\nasp\nphp\njsp\n
+php\nasp\njsp\njsp\n
