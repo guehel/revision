@@ -20,19 +20,22 @@ class Sondage {
         }
     }
     
-    
+    /** lier le cookie vote
+    */
     public function obtenirVote(){
        
             return $_COOKIE['vote'];
        
     }
-
+    /** ecrie le texte vote ds le fichier sondage
+    */
     private function enregistrerVotant($vote) {
         $sondage = fopen($fichierSondage, 'a');
         fwrite($sondage, $vote . '\n');
         fclose($sondage);
     }
-    
+    /**retourne un tableu indexe du nombre de votes par choix
+    */
     public function lireVotes(){
         $php = 0;
         $asp= 0;
@@ -50,7 +53,7 @@ class Sondage {
         fclose($sondage);
         return explode('\n', $fileContent );
     }
-    
+    /**incremente le tableau des sondages selon les votes */
     private function compterVotes($sondage, $listeDesVote){
         foreach ($listeDesVote as $vote){
             $sondage[$vote]++;
@@ -59,7 +62,7 @@ class Sondage {
     }
 
 }
-
+    /**Controleur de l'application */
 $sondage = new Sondage();
 $aVote = $sondage->verifierVote();
 $vote ;
